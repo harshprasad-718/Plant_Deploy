@@ -4,7 +4,6 @@ import numpy as np
 import json
 from gtts import gTTS
 import os
-#from playsound import playsound
 import uuid
 import cv2
 import requests
