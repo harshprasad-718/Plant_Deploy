@@ -7,6 +7,7 @@ import os
 import uuid
 import cv2
 import requests
+import gdown
 
 with open("disease_info.json", "r") as file:
     disease_info = json.load(file)
@@ -17,9 +18,9 @@ MODEL_PATH = "trained_model.keras"
 def download():
     if not os.path.exists(MODEL_PATH):
         print("Downloading model....")
-        response = requests.get(MODEL_URL)
-        with open(MODEL_PATH, 'wb') as f:
-            f.write(response.content)
+        gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
+    if os.path.getsize(MODEL_PATH) < 10000:
+        st.error("Model file is too small. Download may have failed.")
         
 
 # Tensorflow Model Prediction
