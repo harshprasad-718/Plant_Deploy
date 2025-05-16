@@ -12,7 +12,7 @@ import gdown
 with open("disease_info.json", "r") as file:
     disease_info = json.load(file)
 
-MODEL_URL = "https://drive.google.com/uc?export=download&id=1tTyJwTURZhgjTxvfiBQhH2s5paGq45vN"
+MODEL_URL = "https://drive.google.com/uc?export=download&id=1IR9rohbe8T-7iIp0crS0a5V5vzNW7f0p"
 MODEL_PATH = "trained_model.keras"
 
 def download():
